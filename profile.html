@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyra Watch - Profile</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="account-area">
+            <div class="logo">
+                Veyra Watch
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+
+            <button id="backHomeButton" class="logout-button">
+                Back to home
+            </button>
+        </div>
+
+        <div class="search-container">
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search videos and creators"
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="profile-area" id="profileArea">
+            <div class="profile-icon" id="profileIcon">
+                <span id="profileLetter">?</span>
+            </div>
+            <span class="profile-top-name" id="profileTopName"></span>
+        </div>
+
+    </header>
+
+    <main class="profile-content">
+
+        <section class="profile-info">
+
+            <div class="large-profile-icon" id="largeProfileIcon">
+                <span id="largeProfileLetter">?</span>
+            </div>
+
+            <button id="editProfileButton" class="edit-profile-button">
+                Edit Profile
+            </button>
+
+            <button id="verifyAccountButton" class="edit-profile-button verify-account-button" hidden>
+                Verify account
+            </button>
+
+            <h1 id="profileName">
+                Loading...
+            </h1>
+
+            <p id="profileUsername">
+                @username
+            </p>
+
+            <div class="profile-stats">
+
+                <div class="stat">
+                    <span id="videoCount">0</span>
+                    <span>Videos</span>
+                </div>
+
+                <div class="stat">
+                    <span id="likeCount">0</span>
+                    <span>Likes</span>
+                </div>
+
+                <div class="stat">
+                    <span id="subscriberCount">0</span>
+                    <span>Subscribers</span>
+                </div>
+
+            </div>
+
+            <p class="profile-bio" id="profileBio">
+                Not bio yet
+            </p>
+
+        </section>
+
+        <section class="videos-section">
+
+            <div class="videos-header">
+                <h2>
+                    Videos
+                </h2>
+
+                <button id="uploadVideoButton" class="upload-video-button" hidden>
+                    Upload video
+                </button>
+            </div>
+
+            <div class="videos-line"></div>
+
+            <div class="videos-grid" id="videosGrid"></div>
+
+            <div class="no-videos" id="noVideos">
+                No videos yet
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="search.js"></script>
+    <script src="home.js"></script>
+    <script src="profile.js"></script>
+
+</body>
+</html>

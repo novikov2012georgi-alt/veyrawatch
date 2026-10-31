@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyra Watch - Edit Profile</title>
+
+    <link rel="stylesheet" href="edit-profile.css">
+</head>
+
+<body>
+
+    <main class="edit-profile-page">
+
+        <h1>
+            Edit Profile
+        </h1>
+
+        <div class="top-line"></div>
+
+        <section class="avatar-section">
+
+            <div class="avatar-wrapper">
+
+                <div class="avatar-circle" id="avatarCircle">
+                    <span id="avatarLetter">A</span>
+                </div>
+
+                <button
+                    class="camera-button"
+                    id="cameraButton"
+                    aria-label="Change avatar"
+                >
+                    <svg
+                        class="camera-icon"
+                        viewBox="0 0 24 24"
+                        width="20"
+                        height="20"
+                        aria-hidden="true"
+                    >
+                        <path
+                            fill="currentColor"
+                            d="M9 3.5a1 1 0 0 0-.8.4L6.9 5.5H5a2.5 2.5 0 0 0-2.5 2.5v9A2.5 2.5 0 0 0 5 19.5h14a2.5 2.5 0 0 0 2.5-2.5v-9A2.5 2.5 0 0 0 19 5.5h-1.9l-1.3-1.6a1 1 0 0 0-.8-.4H9zm3 5A4 4 0 1 1 8 12.5 4 4 0 0 1 12 8.5zm0 1.5a2.5 2.5 0 1 0 2.5 2.5A2.5 2.5 0 0 0 12 10z"
+                        />
+                    </svg>
+                </button>
+
+                <input
+                    type="file"
+                    id="avatarInput"
+                    accept=".png,.jpg,.jpeg,.ico"
+                    hidden
+                >
+
+                <div class="avatar-panel" id="avatarPanel">
+
+                    <h2>Change Avatar</h2>
+
+                    <div class="avatar-preview" id="avatarPreview">
+                        <span>Preview</span>
+                    </div>
+
+                    <div class="avatar-panel-buttons">
+
+                        <button
+                            id="cancelAvatarButton"
+                            class="panel-button"
+                        >
+                            Cancel
+                        </button>
+
+                        <button
+                            id="saveAvatarButton"
+                            class="panel-button"
+                        >
+                            Save
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="profile-fields">
+
+            <div class="field">
+                <label for="editName">Name</label>
+                <input
+                    type="text"
+                    id="editName"
+                    name="name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="editUsername">Username</label>
+                <input
+                    type="text"
+                    id="editUsername"
+                    name="username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="editBio">Bio</label>
+                <textarea
+                    id="editBio"
+                    name="bio"
+                    rows="4"
+                    maxlength="300"
+                    placeholder="Tell something about yourself"
+                ></textarea>
+            </div>
+
+        </section>
+
+        <button
+            id="saveChangesButton"
+            class="save-changes-button"
+        >
+            Save changes
+        </button>
+
+    </main>
+
+    <script src="edit-profile.js"></script>
+
+</body>
+</html>

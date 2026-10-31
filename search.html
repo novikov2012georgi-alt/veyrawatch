@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyra Watch - Search</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="account-area">
+            <div class="logo">
+                Veyra Watch
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+        </div>
+
+        <div class="search-container">
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search videos and creators"
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="profile-area" id="profileArea">
+            <div class="profile-icon" id="profileIcon">
+                <span id="profileLetter">?</span>
+            </div>
+            <span class="profile-top-name" id="profileTopName"></span>
+        </div>
+
+    </header>
+
+    <main class="main-content">
+
+        <h1 class="section-title" id="searchTitle">
+            Search Results
+        </h1>
+
+        <div class="search-results" id="searchResults"></div>
+
+        <p class="search-empty" id="searchEmpty" hidden>
+            No channels found
+        </p>
+
+    </main>
+
+    <script src="search.js"></script>
+    <script src="home.js"></script>
+
+</body>
+</html>

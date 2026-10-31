@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyra Watch - Upload Video</title>
+
+    <link rel="stylesheet" href="upload-video.css">
+</head>
+
+<body>
+
+    <main class="upload-video-page">
+
+        <div class="top-area">
+            <div class="logo">
+                Veyra Watch
+            </div>
+
+            <button id="backToProfileButton" class="back-button">
+                Back to profile
+            </button>
+        </div>
+
+        <div class="top-line"></div>
+
+        <div class="center-area">
+            <p class="upload-hint">
+                Upload your videos here
+            </p>
+
+            <button id="openUploadButton" class="upload-main-button">
+                Upload
+            </button>
+        </div>
+
+    </main>
+
+    <div id="uploadPanel" class="upload-panel" hidden>
+        <div class="upload-panel-inner">
+            <h2 class="upload-panel-title" id="uploadPanelTitle">
+                Upload Video
+            </h2>
+
+            <!-- Step 1: video -->
+            <div class="upload-step" id="stepVideo">
+                <div class="video-dropzone" id="videoDropzone">
+                    <button type="button" id="pickVideoButton" class="dropzone-upload-button">
+                        Upload
+                    </button>
+
+                    <input
+                        type="file"
+                        id="videoFileInput"
+                        accept="video/mp4,.mp4"
+                        hidden
+                    >
+
+                    <div class="video-preview" id="videoPreview" hidden>
+                        <video id="previewVideo" playsinline></video>
+
+                        <button type="button" id="playVideoButton" class="play-video-button" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                                <path fill="currentColor" d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: icon / thumbnail -->
+            <div class="upload-step" id="stepIcon" hidden>
+                <div class="video-dropzone icon-dropzone" id="iconDropzone">
+                    <button type="button" id="pickIconButton" class="dropzone-upload-button">
+                        Upload icon
+                    </button>
+
+                    <input
+                        type="file"
+                        id="iconFileInput"
+                        accept=".png,.jpg,.jpeg,.ico,image/png,image/jpeg,image/x-icon,image/vnd.microsoft.icon"
+                        hidden
+                    >
+
+                    <div class="icon-preview" id="iconPreview" hidden>
+                        <img id="previewIcon" alt="Video icon">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: title + description -->
+            <div class="upload-step" id="stepDetails" hidden>
+                <div class="details-fields">
+                    <div class="field">
+                        <label for="videoTitleInput">Title</label>
+                        <input
+                            type="text"
+                            id="videoTitleInput"
+                            name="title"
+                            maxlength="120"
+                            placeholder="Enter video title"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="field">
+                        <label for="videoDescriptionInput">Description</label>
+                        <textarea
+                            id="videoDescriptionInput"
+                            name="description"
+                            rows="5"
+                            maxlength="5000"
+                            placeholder="Tell viewers about your video"
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-panel-actions">
+                <button id="prevUploadButton" class="panel-button" hidden>
+                    Prev
+                </button>
+
+                <button id="cancelUploadButton" class="panel-button">
+                    Cancel
+                </button>
+
+                <button id="nextUploadButton" class="panel-button">
+                    Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="upload-video.js"></script>
+
+</body>
+</html>

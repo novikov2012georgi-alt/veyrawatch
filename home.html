@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Veyra Watch</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <header class="topbar">
+
+        <div class="account-area">
+            <div class="logo">
+                Veyra Watch
+            </div>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+        </div>
+
+        <div class="search-container">
+            <span class="search-icon">⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search videos and creators"
+                autocomplete="off"
+            >
+        </div>
+
+        <div class="profile-area" id="profileArea">
+            <div class="profile-icon" id="profileIcon">
+                <span id="profileLetter">?</span>
+            </div>
+            <span class="profile-top-name" id="profileTopName"></span>
+        </div>
+
+    </header>
+
+    <main class="main-content">
+
+        <div class="feed-tabs">
+            <button type="button" class="feed-tab active" data-sort="recommended">
+                Recommendations
+            </button>
+            <button type="button" class="feed-tab" data-sort="fresh">
+                Fresh
+            </button>
+            <button type="button" class="feed-tab" data-sort="popular">
+                Popular
+            </button>
+        </div>
+
+        <div class="home-videos-grid" id="homeVideosGrid"></div>
+
+        <p class="home-videos-empty" id="homeVideosEmpty" hidden>
+            No videos yet
+        </p>
+
+    </main>
+
+    <script src="search.js"></script>
+    <script src="home.js"></script>
+
+</body>
+</html>

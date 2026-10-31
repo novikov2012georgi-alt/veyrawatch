@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veyra Watch - Verify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verify.css">
+</head>
+<body>
+
+    <div class="logo">Veyra Watch</div>
+
+    <main class="registration-card" id="verifyWindow">
+        <h1>Verify</h1>
+
+        <form id="verifyForm">
+            <div class="field">
+                <label for="verifyName">Name</label>
+                <input
+                    type="text"
+                    id="verifyName"
+                    name="name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="roleSelect">Select role</label>
+                <div class="role-select-wrap">
+                    <button
+                        type="button"
+                        class="role-select-btn"
+                        id="roleSelectBtn"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                    >
+                        <span id="roleSelectLabel">Select role</span>
+                        <span class="role-select-arrow">▾</span>
+                    </button>
+                    <ul class="role-dropdown" id="roleDropdown" hidden role="listbox">
+                        <li role="option" data-value="developer">Developer</li>
+                        <li role="option" data-value="gamer">Gamer</li>
+                        <li role="option" data-value="tutorial_maker">Tutorial Maker</li>
+                    </ul>
+                </div>
+                <input type="hidden" id="roleSelect" name="role" value="" required>
+            </div>
+
+            <div class="field">
+                <label for="productSelect">Product</label>
+                <div class="role-select-wrap">
+                    <button
+                        type="button"
+                        class="role-select-btn"
+                        id="productSelectBtn"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                    >
+                        <span id="productSelectLabel">Select product</span>
+                        <span class="role-select-arrow">▾</span>
+                    </button>
+                    <ul class="role-dropdown" id="productDropdown" hidden role="listbox">
+                        <li role="option" data-value="video">Video</li>
+                        <li role="option" data-value="link">Link</li>
+                    </ul>
+                </div>
+                <input type="hidden" id="productSelect" name="product" value="" required>
+            </div>
+
+            <div class="field" id="productVideoField" hidden>
+                <label for="productVideo">Video</label>
+                <div class="file-upload-wrap">
+                    <input
+                        type="file"
+                        id="productVideo"
+                        name="productVideo"
+                        accept="video/*"
+                        class="file-input-hidden"
+                    >
+                    <button type="button" class="file-upload-btn" id="productVideoBtn">
+                        Choose file
+                    </button>
+                    <span class="file-upload-name" id="productVideoName">No file chosen</span>
+                </div>
+            </div>
+
+            <div class="field" id="productLinkField" hidden>
+                <label for="productLink">Link</label>
+                <input
+                    type="url"
+                    id="productLink"
+                    name="productLink"
+                    placeholder="https://"
+                    autocomplete="off"
+                >
+            </div>
+
+            <button type="submit" class="register-button" id="verifySubmitBtn">
+                Verify
+            </button>
+        </form>
+    </main>
+
+    <main class="registration-card" id="verifySuccessWindow" hidden>
+        <h1>Application sent</h1>
+        <p class="verify-success-text">
+            Your application will be processed within 3 days.
+        </p>
+        <a href="/home.html" class="register-button verify-success-link">
+            Back to home
+        </a>
+    </main>
+
+    <script src="verify.js"></script>
+
+</body>
+</html>

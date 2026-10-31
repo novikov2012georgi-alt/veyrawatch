@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veyra Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="logo">Veyra Watch</div>
+
+    <main class="registration-card" id="registrationWindow">
+        <h1>Registration</h1>
+
+        <form id="registrationForm">
+
+            <div class="field">
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-button">
+                Register
+            </button>
+
+        </form>
+
+        <div class="login-text">
+            Already have an account?
+            <a href="#" class="login-link" id="openLogin">
+                Login
+            </a>
+        </div>
+    </main>
+
+    <main class="registration-card" id="loginWindow" hidden>
+        <h1>Login</h1>
+
+        <form id="loginForm">
+
+            <div class="field">
+                <label for="loginEmail">Email</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    name="email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="loginPassword">Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    name="password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-button">
+                Login
+            </button>
+
+        </form>
+
+        <div class="login-text">
+            <a href="#" class="login-link" id="openForgotPassword">
+                Forgot password?
+            </a>
+        </div>
+
+        <div class="login-text">
+            Don't have an account?
+            <a href="#" class="login-link" id="backToRegistration">
+                Register
+            </a>
+        </div>
+    </main>
+
+    <main class="registration-card" id="verificationWindow" hidden>
+        <h1>Verify Email</h1>
+
+        <div class="verification-text">
+            Enter the 6-digit verification code sent to your email.
+        </div>
+
+        <form id="verificationForm">
+
+            <div class="field">
+                <label for="verificationCode">Verification Code</label>
+                <input
+                    type="text"
+                    id="verificationCode"
+                    name="code"
+                    inputmode="numeric"
+                    maxlength="6"
+                    autocomplete="one-time-code"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-button">
+                Verify
+            </button>
+
+        </form>
+    </main>
+
+    <main class="registration-card" id="forgotPasswordWindow" hidden>
+        <h1>Forgot Password</h1>
+
+        <form id="forgotPasswordForm">
+
+            <div class="field">
+                <label for="forgotEmail">Email</label>
+                <input
+                    type="email"
+                    id="forgotEmail"
+                    name="email"
+                    autocomplete="email"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="forgotUsername">Username</label>
+                <input
+                    type="text"
+                    id="forgotUsername"
+                    name="username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-button">
+                Send Reset Link
+            </button>
+
+        </form>
+
+        <div class="login-text">
+            Remember your password?
+            <a href="#" class="login-link" id="backToLogin">
+                Login
+            </a>
+        </div>
+    </main>
+
+    <main class="registration-card" id="resetPasswordWindow" hidden>
+        <h1>Reset Password</h1>
+
+        <form id="resetPasswordForm">
+
+            <div class="field">
+                <label for="newPassword">New Password</label>
+                <input
+                    type="password"
+                    id="newPassword"
+                    name="password"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    autocomplete="new-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="register-button">
+                Reset Password
+            </button>
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
